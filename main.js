@@ -77,11 +77,11 @@ function createRows(num) {
         document.querySelector("#donutChart"),
         {
             series: [44, 55, 41, 17, 15],
-            chart: { type: 'donut', width: 350 },
+            chart: { type: 'donut', width: 500 },
             plotOptions: {
                 pie: {
-                    donut: { size: '65%' },
-                    customScale: 0.9
+                    donut: { size: '45%' },
+                    customScale: 1
                 }
             }
         }
