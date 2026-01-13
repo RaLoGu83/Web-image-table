@@ -16,23 +16,18 @@
 <body>
     <h1>Images gallery</h1>
     <br>
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btnradio0">0</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio1">5</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio2">10</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio3">20</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio4">50</label>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select here the number of rows
+        </button>
+        <ul class="dropdown-menu">
+            <li><a id="btn5" class="dropdown-item" href="#">5</a></li>
+            <li><a id="btn10" class="dropdown-item" href="#">10</a></li>
+            <li><a id="btn20" class="dropdown-item" href="#">20</a></li>
+            <li><a id="btn50" class="dropdown-item" href="#">50</a></li>
+            <li><a id="btnClear" class="dropdown-item" href="#">Clear</a></li>
+        </ul>
     </div>
-    <button id="clear" type="button" class="btn btn-danger">Clear</button>
     <br><br>
     <table class="table table-bordered table-hover">
         <thead>
@@ -73,7 +68,7 @@
     <div id="donutChart"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
