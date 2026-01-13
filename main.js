@@ -46,14 +46,13 @@ function createRows(num) {
             <td><img src="https://picsum.photos/200?random=${i}"></td>
             <td>Description ${i}</td>
         `;
-        table.appendChild(tr);
+        table.appendChild(tr); // AppendChild para ir añadiendo filas a la tabla
     }
 
-    // 🧹 Destruir si ya existen
+    // Destruir si ya existen
     if (barChart) barChart.destroy();
     if (donutChart) donutChart.destroy();
 
-    // 📊 BAR CHART
     barChart = new ApexCharts(
         document.querySelector("#barChart"),
         {
@@ -73,7 +72,7 @@ function createRows(num) {
     );
     barChart.render();
 
-    // 🍩 DONUT CHART
+    // DONUT CHART
     donutChart = new ApexCharts(
         document.querySelector("#donutChart"),
         {
