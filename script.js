@@ -9,8 +9,8 @@ const btn50 = document.getElementById("btn50");
 const btnClear = document.getElementById("btnClear");
 const tbody = document.querySelector('table tbody');
 const tr = document.querySelector("tr");
-const btnBar = document.getElementById("btnBar");
-const btnDonut = document.getElementById("btnDonut");
+const btnStats1 = document.getElementById("btnStats1");
+const btnStats0 = document.getElementById("btnStats0");
 
 // Al escuchar este evento se ejecuta la función "Clear"
 btnClear.addEventListener("click", Clear);
@@ -44,22 +44,20 @@ function numRows(num) { // Función que recibe el número de alguno de los boton
     }
 }
 
-btnBar.addEventListener("click", () => selGraph(0));
-btnDonut.addEventListener("click", () => selGraph(1));
+btnStats1.addEventListener("click", () => selGraph(1));
+btnStats0.addEventListener("click", () => selGraph(0));
 let chart = null;
 
 function selGraph(n) {
-    if(chart){
-        chart.destroy()
-    }
     if (n === 0) {
-        let options = {
+        var options = {
             series: [{
                 data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
             }],
             chart: {
                 type: 'bar',
-                height: 350
+                height: 350,
+                width: 700
             },
             plotOptions: {
                 bar: {
@@ -77,14 +75,17 @@ function selGraph(n) {
                 ],
             }
         };
-        let chart = new ApexCharts(document.querySelector("#barChart"), options);
+
+        var chart = new ApexCharts(document.querySelector("#BarChart"), options);
         chart.render();
-    }
-    else if (n === 1) {
-        let options = {
+
+
+        var options = {
             series: [44, 55, 41, 17, 15],
             chart: {
                 type: 'donut',
+                height: 350, 
+                width: 400
             },
             responsive: [{
                 breakpoint: 480,
@@ -98,7 +99,62 @@ function selGraph(n) {
                 }
             }]
         };
-        let chart = new ApexCharts(document.querySelector("#donutChart"), options);
+
+        var chart = new ApexCharts(document.querySelector("#DonutChart"), options);
+        chart.render();
+    }
+    else if (n === 1) {
+        var options = {
+            series: [{
+                data: [1400, 1000, 48, 400, 140, 880, 69, 67, 120, 180]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350,
+                width: 700
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    borderRadiusApplication: 'end',
+                    horizontal: true,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            xaxis: {
+                categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+                    'United States', 'China', 'Germany'
+                ],
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#BarChart"), options);
+        chart.render();
+
+
+        var options = {
+            series: [5, 55, 20, 87, 1],
+            chart: {
+                type: 'donut',
+                height: 350, 
+                width: 400
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#DonutChart"), options);
         chart.render();
     }
 }
