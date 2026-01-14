@@ -9,7 +9,9 @@ img {
     border-radius: 100px;
 }
 
-div#BarChart, div#DonutChart {
+/* Bloques alineados en paralelo */
+div#BarChart,
+div#DonutChart {
     display: inline-block;
     margin: 20px;
 }
