@@ -21,15 +21,16 @@
             Select here the number of rows
         </button>
         <ul class="dropdown-menu">
-            <li><a id="btn5" class="dropdown-item" href="#">5</a></li>
+            <!-- Se puede quitar el href ya que el botón hace que subas al principio de la página -->
+            <li><a id="btn5" class="dropdown-item" href="#">5</a></li> 
             <li><a id="btn10" class="dropdown-item" href="#">10</a></li>
             <li><a id="btn20" class="dropdown-item" href="#">20</a></li>
             <li><a id="btn50" class="dropdown-item" href="#">50</a></li>
             <li><a id="btnClear" class="dropdown-item" href="#">Clear</a></li>
         </ul>
     </div>
-    <br><br>
-    <table class="table table-bordered table-hover">
+    <br>
+    <table class="table table-bordered table-hover" id="Table">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -60,13 +61,13 @@
 
     </table>
 
-    <div class="dropdown">
+    <div class="dropdown" id="dropStats">
         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Select here the graphic
         </button>
         <ul class="dropdown-menu">
-            <li><a id="btnStats1" class="dropdown-item" href="#">Stats A</a></li>
-            <li><a id="btnStats0" class="dropdown-item" href="#">Stats B</a></li>
+            <li><a id="btnStats1" class="dropdown-item">Stats A</a></li>
+            <li><a id="btnStats0" class="dropdown-item">Stats B</a></li>
         </ul>
     </div>
 

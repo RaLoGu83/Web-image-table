@@ -1,3 +1,9 @@
+*{
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 10%;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -13,5 +19,9 @@ img {
 div#BarChart,
 div#DonutChart {
     display: inline-block;
-    margin: 20px;
+    justify-content: center;
+}
+
+#Table{
+    margin-bottom: 5%;
 }
